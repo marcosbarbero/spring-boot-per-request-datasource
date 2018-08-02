@@ -30,7 +30,7 @@ public class DatabaseConfiguration {
 
     @Bean
     public MultiTenantConnectionProvider multiTenantConnectionProvider(final RestTemplate restTemplate) {
-        return new MultiDataSourceProvider(restTemplate);
+        return new DynamicDataSourceConnectionProvider(restTemplate);
     }
 
     @Bean

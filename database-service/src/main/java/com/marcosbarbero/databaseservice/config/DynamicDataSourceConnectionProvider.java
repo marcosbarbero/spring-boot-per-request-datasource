@@ -15,11 +15,11 @@ import javax.sql.DataSource;
 import static java.lang.String.format;
 
 @Slf4j
-public class MultiDataSourceProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl {
+public class DynamicDataSourceConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl {
 
     private final RestTemplate restTemplate;
 
-    public MultiDataSourceProvider(final RestTemplate restTemplate) {
+    public DynamicDataSourceConnectionProvider(final RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
